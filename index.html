@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="A quiet first-person observation puzzle. Walk, look, and align fragments to collect three impossible postcards."
+    />
+    <meta name="color-scheme" content="dark" />
+    <title>Parallax Postcards — A small change of perspective</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#view">Skip to first-person view</a>
+    <header>
+      <a class="brand" href="./index.html"
+        ><span aria-hidden="true">◫</span> PARALLAX
+        <strong>POSTCARDS</strong></a
+      ><button id="help-open" class="quiet">Field guide ↗</button>
+    </header>
+    <main>
+      <section class="intro">
+        <div>
+          <p class="eyebrow">THREE ROOMS. ONE SMALL CHANGE OF PERSPECTIVE.</p>
+          <h1>Some things only meet<br />when you stand still.</h1>
+        </div>
+        <p>
+          A quiet first-person puzzle about letters,<br />light, and finding the
+          right place to look.
+        </p>
+      </section>
+      <div class="experience">
+        <section class="game" aria-labelledby="room-title">
+          <div class="room-heading">
+            <div>
+              <span id="room-number" class="eyebrow"></span>
+              <h2 id="room-title"></h2>
+            </div>
+            <span
+              id="compass"
+              class="compass"
+              aria-label="Current facing direction"
+            ></span>
+          </div>
+          <div class="viewport">
+            <canvas
+              id="view"
+              width="800"
+              height="500"
+              tabindex="0"
+              aria-label="First-person view of the observation room. Use W/S to move, A/D to strafe, left/right arrows to turn, E to read, and Space to capture. Three-level hints and an optional survey map are available."
+              >Canvas2D is required to play this game.</canvas
+            >
+            <div class="view-caption">
+              <span id="location">GALLERY / 01</span
+              ><span>DRAG TO LOOK · NO POINTER LOCK</span>
+            </div>
+            <div id="canvas-error" hidden>
+              Your browser could not create a Canvas2D view. Please try a
+              browser with Canvas2D enabled.
+            </div>
+          </div>
+          <div class="alignment-row">
+            <div>
+              <p class="eyebrow">FRAGMENT ALIGNMENT</p>
+              <div
+                class="meter"
+                role="progressbar"
+                id="alignment-meter"
+                aria-label="Fragment alignment"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+              >
+                <span id="alignment-fill"></span>
+              </div>
+            </div>
+            <strong id="alignment-value">0%</strong
+            ><button id="capture" class="primary">
+              Capture postcard <kbd>SPACE</kbd>
+            </button>
+          </div>
+          <p id="status" class="status" role="status" aria-live="polite">
+            Find the letter. Take your time.
+          </p>
+          <div class="controls">
+            <div class="movement-controls" aria-label="Movement controls">
+              <button data-nav="turn-left" aria-label="Turn left">↶</button
+              ><button data-nav="forward" aria-label="Walk forward">↑</button
+              ><button data-nav="turn-right" aria-label="Turn right">↷</button
+              ><button data-nav="strafe-left" aria-label="Step left">←</button
+              ><button data-nav="back" aria-label="Walk backward">↓</button
+              ><button data-nav="strafe-right" aria-label="Step right">
+                →
+              </button>
+            </div>
+            <div class="utility-controls">
+              <button id="read">Read the letter <kbd>E</kbd></button>
+              <div>
+                <button id="undo">Undo</button
+                ><button id="reset">Reset position</button>
+              </div>
+              <label class="survey"
+                ><input id="survey" type="checkbox" /> Survey map
+                <small>optional navigation aid</small></label
+              >
+            </div>
+          </div>
+          <p class="keyboard-note">
+            W / S move · A / D strafe · ← / → turn · Shift + turn for fine
+            adjustment
+          </p>
+        </section>
+        <aside>
+          <section class="objective">
+            <p class="eyebrow">YOUR FIELD NOTES</p>
+            <h2>Find a picture<br />between the pieces.</h2>
+            <ol>
+              <li id="task-read">Find and read the floating letter.</li>
+              <li id="task-align">
+                Stand on the brass cross. Turn until the fragments agree.
+              </li>
+              <li id="task-capture">Capture the aligned picture.</li>
+            </ol>
+            <button id="hint" class="quiet">
+              A little nudge <span id="hint-count">0 / 3</span> ↗
+            </button>
+            <p id="hint-text" class="hint-text"></p>
+            <div id="letter" class="letter" hidden>
+              <span class="eyebrow">A LETTER LEFT FOR YOU</span>
+              <p id="letter-text"></p>
+            </div>
+          </section>
+          <section class="collection">
+            <div class="collection-heading">
+              <p class="eyebrow">YOUR POSTCARDS</p>
+              <strong id="progress">0 / 3</strong>
+            </div>
+            <div id="postcards"></div>
+            <button id="next-room" class="primary full" hidden>
+              Enter the next room →
+            </button>
+            <p id="save-status" class="save-note"></p>
+          </section>
+        </aside>
+      </div>
+      <section id="ending" class="ending" tabindex="-1" hidden>
+        <p class="eyebrow">THREE LETTERS. A COMPLETE JOURNEY.</p>
+        <h2>You found the place<br />where the pieces belong.</h2>
+        <p>
+          Keep these small pictures. You can revisit each room,<br />or download
+          your original geometric postcards below.
+        </p>
+        <button id="start-over">Start a new journey</button>
+      </section>
+      <section class="about">
+        <div>
+          <p class="eyebrow">MADE OF LIGHT, CODE & LETTERS</p>
+          <p>No rushing. No jump scares. No hidden timer.</p>
+        </div>
+        <p>
+          A first-person Canvas2D game with original procedural art.<br />Offline
+          after loading. AI-assisted development; no in-game model calls.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <span>PARALLAX POSTCARDS</span><span>WALK SLOWLY. LOOK AGAIN.</span>
+    </footer>
+    <dialog id="help">
+      <div class="dialog-title">
+        <h2>A small field guide</h2>
+        <button id="help-close" aria-label="Close field guide">×</button>
+      </div>
+      <p>
+        Three rooms contain pictures broken across different distances. They
+        only come together from one point of view.
+      </p>
+      <ol>
+        <li>
+          Walk toward the floating envelope and face it. Press
+          <strong>E</strong> or <strong>Read the letter</strong>.
+        </li>
+        <li>
+          Find the brass cross on the floor. The letter tells you which way to
+          face.
+        </li>
+        <li>
+          Move and turn until the picture aligns. Press
+          <strong>Space</strong> or <strong>Capture postcard</strong>.
+        </li>
+        <li>
+          Each collected postcard opens the next room. All three finish the
+          journey.
+        </li>
+      </ol>
+      <p>
+        Keyboard: W/S forward/back; A/D strafe; arrow keys turn; Shift + turn
+        adjusts slowly. Drag the view to turn. Screen buttons work with touch,
+        mouse and keyboard; hold them to keep moving.
+      </p>
+      <p>
+        Use Undo, Reset position, three levels of hints, or the optional survey
+        map whenever you like. No pointer-lock permission, WebGL, audio, account
+        or network service is required.
+      </p>
+    </dialog>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
