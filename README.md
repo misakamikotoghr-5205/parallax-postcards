@@ -38,7 +38,7 @@ This is personal progress, not a trusted competitive score. The save validation 
 
 ## Tests and implementation
 
-`npm test` covers a complete legal three-room playthrough; projection from the authored viewing points; parallax rejection; read/capture requirements; ray hits and wall occlusion; collision and anti-tunneling; undo, room locks and reset; history limits; save validation; finite Canvas2D drawing commands; and self-contained postcard SVGs. `npm run check` checks syntax, DOM references and the local-only runtime boundary. `npm run build` copies an explicit static allowlist.
+`npm test` covers a complete legal three-room playthrough; projection from the authored viewing points; parallax rejection; read/capture requirements; ray hits and wall occlusion; cardinal rays starting exactly on grid lines; collision and anti-tunneling; undo, room locks and reset; history limits; save validation; finite Canvas2D drawing commands; and self-contained postcard SVGs. A boundary regression prevents an axis-parallel ray from multiplying a zero grid offset by infinity, which previously produced a non-finite distance and an incorrect wall when facing west. `npm run check` checks syntax, DOM references and the local-only runtime boundary. `npm run build` copies an explicit static allowlist.
 
 - `world.js`: authored rooms, geometric fragments, movement/collision, DDA rays, observation/capture and browser-state restoration.
 - `renderer.js`: Canvas2D wall strips, depth-clipped geometric line segments, original letter and brass cross, optional survey map and postcard SVG output.

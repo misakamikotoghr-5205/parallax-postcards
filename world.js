@@ -225,8 +225,14 @@ export function castRay(room, origin, angle, maxDistance = 30) {
   const deltaY = Math.abs(dy) < 1e-12 ? Infinity : Math.abs(1 / dy);
   const stepX = dx < 0 ? -1 : 1,
     stepY = dy < 0 ? -1 : 1;
-  let sideX = (dx < 0 ? origin.x - x : x + 1 - origin.x) * deltaX;
-  let sideY = (dy < 0 ? origin.y - y : y + 1 - origin.y) * deltaY;
+  // A parallel axis is never crossed. At an exact grid boundary its offset
+  // can be zero; avoid 0 * Infinity (NaN), which selects the wrong DDA axis.
+  let sideX = Number.isFinite(deltaX)
+    ? (dx < 0 ? origin.x - x : x + 1 - origin.x) * deltaX
+    : Infinity;
+  let sideY = Number.isFinite(deltaY)
+    ? (dy < 0 ? origin.y - y : y + 1 - origin.y) * deltaY
+    : Infinity;
   for (let count = 0; count < 256; count++) {
     let distance, side;
     if (sideX < sideY) {

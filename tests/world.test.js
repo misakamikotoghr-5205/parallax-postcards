@@ -126,6 +126,25 @@ test("DDA hits the correct grid wall and occludes points behind an interior pill
   for (const angle of [0, Math.PI / 2, Math.PI, -Math.PI / 2])
     assert(Number.isFinite(castRay(room, pose, angle).distance));
 });
+test("cardinal rays on exact grid lines skip parallel axes instead of producing NaN or the wrong wall", () => {
+  const room = ROOMS[0], origin = { x: 3, y: 3 };
+  for (const [angles, expected] of [
+    [[0, 2 * Math.PI], { x: 8, y: 3, side: 0, distance: 5 }],
+    [[Math.PI, -Math.PI], { x: 0, y: 3, side: 0, distance: 2 }],
+    [[Math.PI / 2, -3 * Math.PI / 2], { x: 3, y: 8, side: 1, distance: 5 }],
+    [[-Math.PI / 2, 3 * Math.PI / 2], { x: 3, y: 0, side: 1, distance: 2 }],
+  ]) for (const angle of angles) {
+    const hit = castRay(room, origin, angle);
+    assert.equal(hit.hit, true);
+    assert(Number.isFinite(hit.distance));
+    for (const key of ["x", "y", "side", "distance"]) assert.equal(hit[key], expected[key], `${angle}: ${key}`);
+  }
+  const reachable = { x: 2.5, y: 3 };
+  assert(canStand(room, reachable.x, reachable.y));
+  assert.equal(castRay(room, reachable, -Math.PI).distance, 1.5);
+  const short = castRay(room, reachable, -Math.PI, 1);
+  assert.equal(short.hit, false); assert.equal(short.distance, 1);
+});
 test("boundary and interior collisions cannot be tunneled through by larger movements", () => {
   const room = ROOMS[0];
   assert(wallAt(room, -1, -1));
@@ -258,7 +277,7 @@ test("Canvas2D renderer issues only finite geometry commands for every room and 
     },
   };
   for (const room of ROOMS)
-    for (const pose of [room.start, room.target])
+    for (const pose of [room.start, room.target, { x: 2.5, y: 3, angle: -Math.PI }])
       assert(
         renderScene(canvas, { ...createGame(room.id), pose }, { survey: true }),
       );
