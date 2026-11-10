@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "project": "parallax-postcards",
+  "recorded_on": "2026-11-10",
+  "artifact": "../media/parallax-postcards-local-demo.mp4",
+  "duration_seconds": 116.0,
+  "bytes": 2339345,
+  "sha256": "9b3e9a83ec73f64390c2702fa77ec10fa9f570eb97279f6e4748f3c38535ab09",
+  "video": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "25/1",
+    "pix_fmt": "yuv420p",
+    "nb_read_frames": "2900"
+  },
+  "audio": {
+    "codec_name": "aac",
+    "sample_rate": "48000",
+    "channels": 2
+  },
+  "audio_content": "silent anullsrc; no recorded or synthesized voice",
+  "production": "Eight actual native-browser screenshots edited into ten static segments with silent English captions.",
+  "runtime_source_commit_at_capture": "3ede110d29eb248d307cfaf45e9783762032924c",
+  "continuous_screen_recording": false,
+  "source_images_modified_to_fabricate_ui_state": false,
+  "browser_chrome_accounts_unrelated_tabs_removed": true,
+  "formal_jam_entry_verified": false,
+  "qa": {
+    "full_decode_exit_code": 0,
+    "full_decode_stderr_empty": true,
+    "segment_checks": [
+      {
+        "segment": 1,
+        "midpoint_seconds": 5.0,
+        "mean_absolute_rgb_error": 1.6695981224279837,
+        "matches_expected_segment": true
+      },
+      {
+        "segment": 2,
+        "midpoint_seconds": 15.0,
+        "mean_absolute_rgb_error": 1.780656667952675,
+        "matches_expected_segment": true
+      },
+      {
+        "segment": 3,
+        "midpoint_seconds": 26.0,
+        "mean_absolute_rgb_error": 1.6277940136316873,
+        "matches_expected_segment": true
+      },
+      {
+        "segment": 4,
+        "midpoint_seconds": 38.0,
+        "mean_absolute_rgb_error": 1.7692227687757203,
+        "matches_expected_segment": true
+      },
+      {
+        "segment": 5,
+        "midpoint_seconds": 50.0,
+        "mean_absolute_rgb_error": 1.7113745820473252,
+        "matches_expected_segment": true
+      },
+      {
+        "segment": 6,
+        "midpoint_seconds": 62.0,
+        "mean_absolute_rgb_error": 1.7139805169753088,
+        "matches_expected_segment": true
+      },
+      {
+        "segment": 7,
+        "midpoint_seconds": 74.0,
+        "mean_absolute_rgb_error": 1.6809759194958847,
+        "matches_expected_segment": true
+      },
+      {
+        "segment": 8,
+        "midpoint_seconds": 86.0,
+        "mean_absolute_rgb_error": 1.6839194315843622,
+        "matches_expected_segment": true
+      },
+      {
+        "segment": 9,
+        "midpoint_seconds": 99.0,
+        "mean_absolute_rgb_error": 1.770651523919753,
+        "matches_expected_segment": true
+      },
+      {
+        "segment": 10,
+        "midpoint_seconds": 111.0,
+        "mean_absolute_rgb_error": 1.6822101658950617,
+        "matches_expected_segment": true
+      }
+    ]
+  },
+  "main_operator_review": {
+    "actual_contact_sheets": [
+      1,
+      2
+    ],
+    "full_size_actual_midpoints": [
+      4,
+      9
+    ],
+    "privacy_and_legibility_passed": true
+  },
+  "timeline": [
+    {
+      "segment": 1,
+      "start_seconds": 0,
+      "duration_seconds": 10,
+      "title": "A small change of perspective",
+      "source_capture_name": "01-letter-read.png",
+      "source_capture_sha256": "1e23cef5c6f939c34b7d7846fa9402c06f43392d4decd7d3eec940d2cbdf1b55",
+      "crop": [
+        244,
+        66,
+        1565,
+        1064
+      ],
+      "privacy_reviewed": true
+    },
+    {
+      "segment": 2,
+      "start_seconds": 10,
+      "duration_seconds": 10,
+      "title": "Read the room",
+      "source_capture_name": "01-letter-read.png",
+      "source_capture_sha256": "1e23cef5c6f939c34b7d7846fa9402c06f43392d4decd7d3eec940d2cbdf1b55",
+      "crop": [
+        1275,
+        370,
+        1565,
+        555
+      ],
+      "privacy_reviewed": true
+    },
+    {
+      "segment": 3,
+      "start_seconds": 20,
+      "duration_seconds": 12,
+      "title": "A view can be wrong",
+      "source_capture_name": "02-wrong-angle.png",
+      "source_capture_sha256": "a7714ff0f3a0fab90ed7cb275dfa29cc44fcb2c531c17d21dbb13fddc52b3e50",
+      "crop": [
+        244,
+        66,
+        1565,
+        1064
+      ],
+      "privacy_reviewed": true
+    },
+    {
+      "segment": 4,
+      "start_seconds": 32,
+      "duration_seconds": 12,
+      "title": "Room 1: the house",
+      "source_capture_name": "03-house-collected.png",
+      "source_capture_sha256": "b20d190c5bbc49f00c44f72db70ec8239c68aa002851db45a4f879f5f4da50cc",
+      "crop": [
+        244,
+        66,
+        1565,
+        1064
+      ],
+      "privacy_reviewed": true
+    },
+    {
+      "segment": 5,
+      "start_seconds": 44,
+      "duration_seconds": 12,
+      "title": "Undo the capture",
+      "source_capture_name": "04-undo-restored.png",
+      "source_capture_sha256": "f93760153ab479bb6d65eb45f271c8cdbc00bead602a57ef153631b69021db95",
+      "crop": [
+        244,
+        66,
+        1565,
+        1064
+      ],
+      "privacy_reviewed": true
+    },
+    {
+      "segment": 6,
+      "start_seconds": 56,
+      "duration_seconds": 12,
+      "title": "Room 2: the folded sea",
+      "source_capture_name": "05-boat-collected.png",
+      "source_capture_sha256": "f4eb03e159eda7c954f5c5a5a83efbefa7d1161b3926f77f338ddcb86a0e1025",
+      "crop": [
+        244,
+        66,
+        1565,
+        1064
+      ],
+      "privacy_reviewed": true
+    },
+    {
+      "segment": 7,
+      "start_seconds": 68,
+      "duration_seconds": 12,
+      "title": "Room 3: the light left on",
+      "source_capture_name": "06-lantern-collected.png",
+      "source_capture_sha256": "5a21c815e98dc0299e12b9aa7bacdbcce5e347874e7b44d57d76ce0f04ffb988",
+      "crop": [
+        244,
+        66,
+        1565,
+        1064
+      ],
+      "privacy_reviewed": true
+    },
+    {
+      "segment": 8,
+      "start_seconds": 80,
+      "duration_seconds": 12,
+      "title": "Keep the small pictures",
+      "source_capture_name": "07-ending.png",
+      "source_capture_sha256": "a6e0b25a6877387d640387657d199edd29ecd8249923cd5b7a9cf58faa1fdea9",
+      "crop": [
+        244,
+        70,
+        1565,
+        955
+      ],
+      "privacy_reviewed": true
+    },
+    {
+      "segment": 9,
+      "start_seconds": 92,
+      "duration_seconds": 14,
+      "title": "Return to the same place",
+      "source_capture_name": "08-reload-restored.png",
+      "source_capture_sha256": "e456816ab4552f187bb225ec31634a393e462a902064d27ef77ac13ed37160f7",
+      "crop": [
+        244,
+        275,
+        1565,
+        955
+      ],
+      "privacy_reviewed": true
+    },
+    {
+      "segment": 10,
+      "start_seconds": 106,
+      "duration_seconds": 10,
+      "title": "Original work, clear scope",
+      "source_capture_name": "07-ending.png",
+      "source_capture_sha256": "a6e0b25a6877387d640387657d199edd29ecd8249923cd5b7a9cf58faa1fdea9",
+      "crop": [
+        244,
+        580,
+        1565,
+        1050
+      ],
+      "privacy_reviewed": true
+    }
+  ],
+  "public_poster_frames": [
+    {
+      "path": "../media/house-collected.png",
+      "bytes": 496705,
+      "sha256": "c53b20293bb668f40a5f4125d6672e1b4343d63bdbf059815ab1c035a1d051d1",
+      "kind": "actual encoded MP4 midpoint frame"
+    },
+    {
+      "path": "../media/reload-restored.png",
+      "bytes": 426988,
+      "sha256": "f15acbd313b025c61640b8eb547d76e098f254efce4d0dc160bcd77a6590fda4",
+      "kind": "actual encoded MP4 midpoint frame"
+    }
+  ],
+  "limitations": [
+    "Local desktop evidence; itch.io login, public game page and formal jam submission are not established by this film.",
+    "Selected stills, not continuous gameplay or a mobile-device evaluation.",
+    "No runtime model call; Codex-assisted original source and procedural artwork."
+  ]
+}
