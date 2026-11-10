@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "project": "parallax-postcards",
+  "capture_date_utc": "2026-11-10",
+  "runtime_source_commit": "3ede110d29eb248d307cfaf45e9783762032924c",
+  "capture_method": "Native desktop browser screenshots of actual manual gameplay, captured by the coordinating operator; separate still images at selected scroll positions, not continuous recording.",
+  "screenshot_type": "Actual game UI screenshots, not generated artwork or cover illustrations.",
+  "source_png_bytes_preserved": true,
+  "screenshot_count": 8,
+  "screenshots": [
+    {
+      "file": "01-letter-read.png",
+      "title": "Room 1 — read the letter",
+      "caption": "The return address shows its original letter text, with the read objective crossed out and 0/3 postcards. The player is facing north (0°).",
+      "bytes": 126907,
+      "sha256": "1e23cef5c6f939c34b7d7846fa9402c06f43392d4decd7d3eec940d2cbdf1b55",
+      "width_px": 1819,
+      "height_px": 1066,
+      "copied_without_modification": true
+    },
+    {
+      "file": "02-wrong-angle.png",
+      "title": "Wrong-angle capture is rejected",
+      "caption": "At 0% alignment and 0/3 postcards, the game explains that fragments are behind the player or hidden by a wall; no postcard is awarded.",
+      "bytes": 127142,
+      "sha256": "a7714ff0f3a0fab90ed7cb275dfa29cc44fcb2c531c17d21dbb13fddc52b3e50",
+      "width_px": 1819,
+      "height_px": 1066,
+      "copied_without_modification": true
+    },
+    {
+      "file": "03-house-collected.png",
+      "title": "House captured — 1/3",
+      "caption": "The house fragments align at 100%, facing east (90°). The first postcard is marked collected, progress is 1/3, and the next room is open.",
+      "bytes": 148700,
+      "sha256": "b20d190c5bbc49f00c44f72db70ec8239c68aa002851db45a4f879f5f4da50cc",
+      "width_px": 1819,
+      "height_px": 1066,
+      "copied_without_modification": true
+    },
+    {
+      "file": "04-undo-restored.png",
+      "title": "Undo restores the uncaptured house — 0/3",
+      "caption": "After Undo, progress returns from 1/3 to 0/3. The aligned house remains visible at 100%, capture is available again, and the game says the previous step has been restored.",
+      "bytes": 138982,
+      "sha256": "f93760153ab479bb6d65eb45f271c8cdbc00bead602a57ef153631b69021db95",
+      "width_px": 1819,
+      "height_px": 1066,
+      "copied_without_modification": true
+    },
+    {
+      "file": "05-boat-collected.png",
+      "title": "Paper boat captured — 2/3",
+      "caption": "After recapturing the house and entering the second room, the paper boat is collected at 100% alignment, facing south (180°), with 2/3 postcards.",
+      "bytes": 150969,
+      "sha256": "f4eb03e159eda7c954f5c5a5a83efbefa7d1161b3926f77f338ddcb86a0e1025",
+      "width_px": 1819,
+      "height_px": 1066,
+      "copied_without_modification": true
+    },
+    {
+      "file": "06-lantern-collected.png",
+      "title": "Lantern captured — 3/3",
+      "caption": "The third room aligns a lantern at 100%, facing west (270°). All three postcard rows are marked collected and progress is 3/3.",
+      "bytes": 149571,
+      "sha256": "5a21c815e98dc0299e12b9aa7bacdbcce5e347874e7b44d57d76ce0f04ffb988",
+      "width_px": 1819,
+      "height_px": 1066,
+      "copied_without_modification": true
+    },
+    {
+      "file": "07-ending.png",
+      "title": "The ending is reached",
+      "caption": "The page is scrolled down to show the completed journey message and Start a new journey control, while the collection remains 3/3.",
+      "bytes": 142666,
+      "sha256": "a6e0b25a6877387d640387657d199edd29ecd8249923cd5b7a9cf58faa1fdea9",
+      "width_px": 1819,
+      "height_px": 1066,
+      "copied_without_modification": true
+    },
+    {
+      "file": "08-reload-restored.png",
+      "title": "Reload restores the completed journey",
+      "caption": "After reload, the game says the position and postcards have been restored. Progress remains 3/3, the ending remains visible and Undo is disabled; old undo history is not restored.",
+      "bytes": 140078,
+      "sha256": "e456816ab4552f187bb225ec31634a393e462a902064d27ef77ac13ed37160f7",
+      "width_px": 1819,
+      "height_px": 1066,
+      "copied_without_modification": true
+    }
+  ],
+  "observed_playthrough": {
+    "all_three_rooms_played": true,
+    "letters_read": true,
+    "wrong_angle_capture_rejected": true,
+    "house_capture_progress": "1/3",
+    "undo_house_capture_progress": "0/3",
+    "house_recaptured": true,
+    "boat_capture_progress": "2/3",
+    "lantern_capture_progress": "3/3",
+    "ending_observed": true,
+    "reload_restored_progress": "3/3",
+    "undo_disabled_after_reload": true
+  },
+  "actual_browser_download": {
+    "file": "actual-lantern-export.svg",
+    "bytes": 998,
+    "sha256": "b966a485c2b3e2d3274d1c08b3a9fc46f308b125363f0366b152b78057cd8e25",
+    "width": "800",
+    "height": "560",
+    "downloaded_from_game": true,
+    "xml_parse_passed": true,
+    "external_references_found": false,
+    "scripts_or_event_handlers_found": false
+  },
+  "review": {
+    "all_eight_original_pngs_visually_reviewed": true,
+    "png_decode_and_dimensions_checked": true,
+    "screenshots_contain_only_original_game_ui": true,
+    "browser_chrome_or_personal_information_visible": false,
+    "console_status": "No console-error or console-clean claim is made by this record.",
+    "mobile_or_narrow_viewport_coverage_claimed": false,
+    "input_device_coverage": "This records the observed desktop run, not a separate touch/mobile input evaluation."
+  },
+  "formal_itch_submission": false,
+  "itch_jam_joined": false,
+  "submission_limit": "itch.io verification still awaits current action-time consent; jam join, public game upload and final jam entry remain separate and uncompleted.",
+  "scope": "Observed local browser gameplay and the actual downloaded postcard, not an authenticated score, contest entry receipt, complete cross-browser evaluation or continuous video."
+}

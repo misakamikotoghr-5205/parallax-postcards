@@ -45,13 +45,15 @@ This is personal progress, not a trusted competitive score. The save validation 
 - `app.js`: keyboard/touch/drag controls, collection UI, local saves and downloads.
 - `docs/landscape.md`: two genuinely similar open-source raycasters, verified MIT licenses, commits, design comparisons and independent implementation boundaries.
 
-Automated geometry tests do not replace visual/browser QA, which the coordinating agent handles separately. This prototype has flat floors, constant-height grid walls and 2.5D line geometry; it is not a general 3D engine and has no imported meshes, vertical movement or physics simulation.
+A real desktop browser playthrough on **November 10, 2026** read the letters, rejected a wrong-angle capture, collected the house, undid it from 1/3 to 0/3, recaptured it and completed the boat and lantern for 3/3. The ending was observed, an actual lantern SVG was downloaded, and reload restored 3/3 with Undo disabled. The [actual gameplay gallery](docs/gallery/README.md) contains eight unchanged screenshots, the downloaded SVG and per-file hashes, tied to runtime source `3ede110d29eb248d307cfaf45e9783762032924c`.
+
+These selected desktop screenshots are separate from automated geometry tests; they do not establish mobile/narrow-viewport coverage, console-clean status or a complete cross-browser evaluation. This prototype has flat floors, constant-height grid walls and 2.5D line geometry; it is not a general 3D engine and has no imported meshes, vertical movement or physics simulation.
 
 ## Jam and AI disclosure
 
 Prepared for [Through Your Eyes: First-Person Game Jam](https://itch.io/jam/through-your-eyes-first-person-game-jam), checked 2026-11-05. The official rules allow solo/team entries, any engine, and playable first-person prototypes. See [competition notes](docs/competition.md) for the deadline ambiguity and actual submission steps.
 
-**Not joined, uploaded or submitted to itch.io.** A GitHub push or private preview does not submit a jam entry. The owner must review the live rules, create the game page, upload the playable build, provide accurate credits/disclosures and submit it to the jam before the account's displayed countdown expires.
+**Not joined, uploaded or submitted to itch.io.** Current action-time consent for itch.io verification is pending. A GitHub push, actual browser playthrough or private preview does not submit a jam entry. The owner must review the live rules, create the game page, upload the playable build, provide accurate credits/disclosures and submit it to the jam before the account's displayed countdown expires.
 
 Codex assisted with design, independently authored code, level geometry, testing and documentation. There are no runtime AI calls. No third-party code or assets are bundled; related projects were reviewed as design references only. All text, geometric art, room layouts and interface code were created for this project. No commercial game art, fonts, sounds or IP were copied. See [development disclosure](docs/ai-development.md).
 
